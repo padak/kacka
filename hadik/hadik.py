@@ -1,5 +1,6 @@
 import time
 import turtle
+import random
 
 okno = turtle.Screen()
 okno.title("Hadík")
@@ -57,8 +58,7 @@ pero.penup()
 pero.goto(0, 250)
 pero.write("Skóre: {}".format(skore), align="center", font=("candara", 24, "bold"))
 
-import time
-import random
+
 while True:
     okno.update()
     if hadik.xcor() > 290 or hadik.xcor() < -290 or hadik.ycor() > 290 or hadik.ycor() < -290:
@@ -74,4 +74,4 @@ while True:
         pero.write("Skóre: {}".format(skore), align="center", font=("candara", 24, "bold"))
     pohyb()
     time.sleep(0.1)
-# okno.mainloop()
+okno.mainloop()
